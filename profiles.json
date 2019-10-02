@@ -1,0 +1,106 @@
+// Windows Terminal Settings Scheme - Mohammed Javith Akthar [ https://github.com/javithakthar ]
+// A good place to getting started- [ https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md ]
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema", // https://github.com/microsoft/terminal/blob/master/doc/cascadia/SettingsSchema.md
+    "alwaysShowTabs": true,
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "initialCols": 120,
+    "initialRows": 30,
+    "requestedTheme": "system",
+    "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": true,
+    "wordDelimiters": " /\\()\"'-.,:;<>~!@#$%^&*|+=[]{}~?\u2502",
+    // Warning! Do not add Windows.Terminal.Wsl below as the profile is based on wsl
+    "disabledProfileSources": ["Windows.Terminal.Azure"], // To prevent auto inserting garbage profiles by default.
+
+    "profiles": [{
+            "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+            "backgroundImage": "ms-appdata:///roaming/spidey.gif", // %userprofile%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\RoamingState
+            "closeOnExit": true,
+            "colorScheme": "Spiderman",
+            "commandline": "wsl.exe -d Ubuntu",
+            "fontFace": "Cascadia Code",
+            "fontSize": 14,
+            "historySize": 9001,
+            "icon": "ms-appx:///Images/LockScreenLogo.scale-400.png", // I like the windows terminal app icon
+            "name": "Just a Shell",
+            "padding": "0, 0, 0, 0",
+            "snapOnInput": true,
+            "startingDirectory": "%USERPROFILE%"
+        },
+        {
+            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+            "hidden": false,
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl"
+        }
+    ],
+    "schemes": [{
+        "name": "Spiderman", // https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/Spiderman.json
+        "black": "#1b1d1e",
+        "red": "#e60813",
+        "green": "#e22928",
+        "yellow": "#e24756",
+        "blue": "#2c3fff",
+        "purple": "#2435db",
+        "cyan": "#3256ff",
+        "white": "#fffef6",
+        "brightBlack": "#505354",
+        "brightRed": "#ff0325",
+        "brightGreen": "#ff3338",
+        "brightYellow": "#fe3a35",
+        "brightBlue": "#1d50ff",
+        "brightPurple": "#747cff",
+        "brightCyan": "#6184ff",
+        "brightWhite": "#fffff9",
+        "background": "#1b1d1e",
+        "foreground": "#e3e3e3"
+    }],
+    "keybindings": [
+        { "command": "closePane", "keys": [ "ctrl+alt+x" ] },
+        { "command": "closeWindow", "keys": ["alt+f4"] },
+        { "command": "copy", "keys": [ "ctrl+c" ] },
+        { "command": "copy", "keys": ["ctrl+shift+c"] },
+        { "command": "duplicateTab", "keys": ["ctrl+shift+d"] },
+        { "command": "moveFocusDown", "keys": [ "ctrl+down" ] },
+        { "command": "moveFocusLeft", "keys": [ "ctrl+left" ] },
+        { "command": "moveFocusRight", "keys": [ "ctrl+right" ] },
+        { "command": "moveFocusUp", "keys": [ "ctrl+up" ] },
+        { "command": "newTab", "keys": ["ctrl+shift+t"] },
+        { "command": "newTabProfile0", "keys": ["ctrl+shift+1"] },
+        { "command": "newTabProfile1", "keys": ["ctrl+shift+2"] },
+        { "command": "newTabProfile2", "keys": ["ctrl+shift+3"] },
+        { "command": "newTabProfile3", "keys": ["ctrl+shift+4"] },
+        { "command": "newTabProfile4", "keys": ["ctrl+shift+5"] },
+        { "command": "newTabProfile5", "keys": ["ctrl+shift+6"] },
+        { "command": "newTabProfile6", "keys": ["ctrl+shift+7"] },
+        { "command": "newTabProfile7", "keys": ["ctrl+shift+8"] },
+        { "command": "newTabProfile8", "keys": ["ctrl+shift+9"] },
+        { "command": "nextTab", "keys": ["ctrl+tab"] },
+        { "command": "openNewTabDropdown", "keys": ["ctrl+shift+space"] },
+        { "command": "openSettings", "keys": ["ctrl+,"] },
+        { "command": "paste", "keys": [ "ctrl+v" ] },
+        { "command": "paste", "keys": ["ctrl+shift+v"] },
+        { "command": "prevTab", "keys": ["ctrl+shift+tab"] },
+        { "command": "resizePaneDown", "keys": [ "alt+down" ] },
+        { "command": "resizePaneLeft", "keys": [ "alt+left" ] },
+        { "command": "resizePaneRight", "keys": [ "alt+right" ] },
+        { "command": "resizePaneUp", "keys": [ "alt+up" ] },
+        { "command": "scrollDown", "keys": ["ctrl+shift+down"] },
+        { "command": "scrollDownPage", "keys": ["ctrl+shift+pgdn"] },
+        { "command": "scrollUp", "keys": ["ctrl+shift+up"] },
+        { "command": "scrollUpPage", "keys": ["ctrl+shift+pgup"] },
+        { "command": "splitHorizontal", "keys": [ "ctrl+alt+down" ] },
+        { "command": "splitVertical", "keys": [ "ctrl+alt+right" ] },
+        { "command": "switchToTab0", "keys": ["ctrl+alt+1"] },
+        { "command": "switchToTab1", "keys": ["ctrl+alt+2"] },
+        { "command": "switchToTab2", "keys": ["ctrl+alt+3"] },
+        { "command": "switchToTab3", "keys": ["ctrl+alt+4"] },
+        { "command": "switchToTab4", "keys": ["ctrl+alt+5"] },
+        { "command": "switchToTab5", "keys": ["ctrl+alt+6"] },
+        { "command": "switchToTab6", "keys": ["ctrl+alt+7"] },
+        { "command": "switchToTab7", "keys": ["ctrl+alt+8"] },
+        { "command": "switchToTab8", "keys": ["ctrl+alt+9"] }
+    ]
+}
